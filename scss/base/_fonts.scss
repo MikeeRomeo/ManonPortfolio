@@ -1,0 +1,53 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+@font-face {
+  font-family: 'Aileron';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Aileron Regular'), url('fonts/aileron/Aileron-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Aileron Thin'), url('fonts/aileron/Aileron-Thin.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Aileron UltraLight'), url('fonts/aileron/Aileron-UltraLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Aileron Light'), url('fonts/aileron/Aileron-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Aileron SemiBold'), url('fonts/aileron/Aileron-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Aileron Bold'), url('fonts/aileron/Aileron-Bold.woff') format('woff');
+}
+
+html{
+  font-family: 'Aileron', sans-serif !important;
+}
+
+.nanum-font{
+  font-family: 'Nanum Pen Script', cursive;
+}

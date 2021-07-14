@@ -1,0 +1,30 @@
+@import
+'abstracts/animations',
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+// Uncomment if needed
+// @import
+//'vendors/bootstrap',
+//'vendors/jquery-ui';
+
+@import
+'base/reset',
+'base/typography';
+
+@import
+'layout/header',
+'layout/footer',
+'layout/forms';
+
+@import
+'components/buttons';
+
+@import
+'pages/home';
+
+// Implement in case there is global theme styling.
+//@import
+//'themes/theme',
+//'themes/admin';

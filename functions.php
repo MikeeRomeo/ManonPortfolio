@@ -14,6 +14,7 @@ register_nav_menus( array( 'main-menu' => esc_html__( 'Main Menu', 'generic' ) )
 add_action( 'wp_enqueue_scripts', 'generic_load_scripts' );
 function generic_load_scripts() {
 wp_enqueue_style( 'generic-style', get_stylesheet_uri() );
+wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/slider.css',false,'1.1','all');
 wp_enqueue_script( 'jquery' );
 wp_register_script( 'generic-videos', get_template_directory_uri() . '/js/videos.js' );
 wp_enqueue_script( 'generic-videos' );
