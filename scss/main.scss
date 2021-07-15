@@ -17,12 +17,14 @@
 'base/typography';
 
 @import
+'layout/grid',
 'layout/header',
 'layout/footer',
 'layout/forms';
 
 @import
-'components/buttons';
+'components/buttons',
+'components/navbar';
 
 @import
 'pages/home';
