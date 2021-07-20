@@ -15,7 +15,8 @@
                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/MB_logo.svg"
                          alt="Manon Beekman Fotografie Logo"/>
                 </a>
-                <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+                <nav id="menu" class="nav" role="navigation" itemscope itemtype="https://schema
+                .org/SiteNavigationElement">
 <!--                    <button type="button" class="menu-toggle">-->
 <!--                        <span class="menu-icon">&#9776;</span>-->
 <!--                        <span class="menu-text screen-reader-text">-->
@@ -26,6 +27,13 @@
                         'link_after' => '</span>'));
                     ?>
                 </nav>
+
+                <?php
+                wp_nav_menu( array(
+                    'theme_location' => 'socials-menu',
+                    'container_class' => 'socials-nav nav' ) );
+                ?>
+
             </div>
         </div>
     </header>

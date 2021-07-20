@@ -1,9 +1,9 @@
 #header{
   background-color: $beige;
   //max-height: 100px;
-  width: 100vw;
-  position: fixed;
-  padding: 25px 0 10px;
+  width: 100%;
+  //position: fixed;
+  padding: 10px 0 10px;
   top: 0;
 
   .container__row{
@@ -12,6 +12,7 @@
 
   #logo{
     max-width: 220px;
+    margin-top: 15px;
 
     img{ width: 100% }
   }

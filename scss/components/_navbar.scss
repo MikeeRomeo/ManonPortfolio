@@ -1,6 +1,5 @@
-#menu{
-  position: relative;
-  align-self: end;
+.nav{
+  display: flex;
 
   ul{
     display: flex;
@@ -8,18 +7,62 @@
     padding: 0;
     margin: 0;
 
-    .page_item{
+    li{
       list-style: none;
+      text-decoration: none;
+    }
+
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+#menu{
+  position: relative;
+  align-self: end;
+
+  .menu-main-menu-container{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
+
+  #menu-main-menu{
+
+    li{
       font-family: reason-new, sans-serif;
       font-weight: 300;
       font-size: 16px;
       text-transform: uppercase;
-      text-decoration: none;
       padding: 0 15px;
     }
 
-    .page_item a{
-      text-decoration: none;
+    a{
+      color: $gray;
     }
   }
+}
+
+.socials-nav{
+  align-items: center;
+
+  ul{
+    li{
+      font-size: 20px;
+      opacity: 0.4;
+      padding: 3px;
+      transition: opacity 0.15s ease-in-out;
+
+      &:hover, &:active{
+        opacity: 1;
+      }
+    }
+
+    a{
+      color: $gray;
+    }
+  }
+
 }
