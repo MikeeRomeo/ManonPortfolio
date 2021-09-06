@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?> <?php generic_schema_type(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>"/>
-    <meta name="viewport" content="width=device-width"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -11,12 +11,10 @@
     <header id="header" role="header">
         <div class="container">
             <div class="container__row">
-                <a id="logo" href="<?php echo get_home_url() ?>">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/MB_logo.svg"
-                         alt="Manon Beekman Fotografie Logo"/>
-                </a>
-                <nav id="menu" class="nav" role="navigation" itemscope itemtype="https://schema
-                .org/SiteNavigationElement">
+
+                <?php include 'theme-logo.php'; ?>
+                <nav id="menu" class="nav" role="navigation" itemscope
+                     itemtype="https://schema.org/SiteNavigationElement">
 <!--                    <button type="button" class="menu-toggle">-->
 <!--                        <span class="menu-icon">&#9776;</span>-->
 <!--                        <span class="menu-text screen-reader-text">-->

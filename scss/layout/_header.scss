@@ -1,16 +1,17 @@
 #header{
-  background-color: $beige;
-  //max-height: 100px;
+  background-color: $beige-op;
   width: 100%;
-  //position: fixed;
+  position: fixed;
   padding: 10px 0 10px;
   top: 0;
+  z-index: 99;
+  height: 80px;
 
   .container__row{
     justify-content: space-between;
   }
 
-  #logo{
+  .logo{
     max-width: 220px;
     margin-top: 15px;
 
