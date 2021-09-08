@@ -14,7 +14,7 @@
                         <div class="nav-next"><?php next_image_link(false, '&rsaquo;'); ?></div>
                     </nav>
                 </header>
-                <div class="entry-content" itemprop="mainContentOfPage">
+                <div class="entry-content container" itemprop="mainContentOfPage">
                     <div class="entry-attachment">
                         <?php if (wp_attachment_is_image($post->ID)) : $att_image = wp_get_attachment_image_src($post->ID, 'full'); ?>
                             <p class="attachment"><a href="<?php echo esc_url(wp_get_attachment_url($post->ID)); ?>"

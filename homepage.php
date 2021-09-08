@@ -24,7 +24,7 @@
                         } ?>
                     </div>
                 </div>
-                <div class="entry-content" itemprop="mainContentOfPage">
+                <div class="entry-content container" itemprop="mainContentOfPage">
 
                     <?php the_content(); ?>
                     <div class="entry-links"><?php wp_link_pages(); ?></div>

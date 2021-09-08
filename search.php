@@ -13,7 +13,7 @@
 <header class="header">
 <h1 class="entry-title" itemprop="name"><?php esc_html_e( 'Nothing Found', 'generic' ); ?></h1>
 </header>
-<div class="entry-content" itemprop="mainContentOfPage">
+<div class="entry-content container" itemprop="mainContentOfPage">
 <p><?php esc_html_e( 'Sorry, nothing matched your search. Please try again.', 'generic' ); ?></p>
 <?php get_search_form(); ?>
 </div>
