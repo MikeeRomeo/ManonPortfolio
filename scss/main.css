@@ -566,10 +566,29 @@ p {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.21;
-  margin-bottom: 0;
+  margin-top: 0;
 }
 p b {
   font-weight: bold;
+}
+
+.title {
+  display: inline-block;
+  font-weight: 700;
+  position: relative;
+}
+.title--underline {
+  text-transform: uppercase;
+}
+.title--underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #E2B671;
+  opacity: 0.5;
+  left: 0;
+  bottom: -2px;
 }
 
 @media screen and (max-width: -1px) {
@@ -1040,6 +1059,55 @@ p b {
   width: 100%;
 }
 
+.button {
+  font-size: 12px;
+  color: #707070;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+.button--outline {
+  padding: 10px 20px 8px;
+  border: 1px solid #707070;
+}
+.button--outline:hover {
+  background-color: #707070;
+  color: white;
+}
+.button--link {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 5px;
+  background-color: transparent;
+  border: 0 solid transparent;
+  cursor: pointer;
+}
+.button--link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #E2B671;
+  opacity: 0;
+  left: 0;
+  bottom: 11px;
+  z-index: -1;
+  transition: all 0.15s ease-in-out;
+}
+.button--link:hover::after {
+  opacity: 0.4;
+}
+.button--link.active::after {
+  opacity: 0.4;
+  bottom: 5px;
+}
+
 .logo {
   display: block;
 }
@@ -1156,6 +1224,15 @@ p b {
   color: #E2B671;
 }
 
+.wp-block-lazyblock-portfolio-gallery {
+  margin: 40px 0;
+}
+@media (min-width: 992px) {
+  .wp-block-lazyblock-portfolio-gallery {
+    margin: 150px 0 130px;
+  }
+}
+
 .portfolio_gallery__wrapper {
   position: relative;
   height: 75vh;
@@ -1164,6 +1241,8 @@ p b {
   width: 100%;
   position: absolute;
   opacity: 0;
+  display: flex;
+  flex-direction: column-reverse;
   transform: translateX(-14px);
   transition: all 0.25s ease-in-out;
 }
@@ -1172,23 +1251,60 @@ p b {
   opacity: 1;
   z-index: 50;
 }
+@media (min-width: 992px) {
+  .portfolio_gallery__item {
+    flex-direction: row;
+  }
+}
 .portfolio_gallery__description {
-  max-width: 650px;
-  padding: 80px 130px 70px;
+  width: 100%;
+  padding: 30px 20px 20px;
   background-color: white;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  color: #707070;
+  top: -30px;
+}
+.portfolio_gallery__description .title {
+  margin: 0;
+  font-size: 14px;
+}
+.portfolio_gallery__description .button {
+  margin-top: 11px;
+}
+@media (min-width: 992px) {
+  .portfolio_gallery__description {
+    max-width: 550px;
+    padding: 70px 100px 70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .portfolio_gallery__image {
-  width: 70%;
-  height: 75vh;
-  margin-left: auto;
+  width: calc(100% + 32px);
+  height: 45vh;
+  margin-left: -32px;
 }
 .portfolio_gallery__image img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+@media (min-width: 992px) {
+  .portfolio_gallery__image {
+    width: 70%;
+    height: 75vh;
+    margin-left: auto;
+  }
+}
+.portfolio_gallery__nav {
+  width: 70%;
+  margin-left: auto;
+  text-align: center;
+  padding: 16px 0;
+}
+.portfolio_gallery__nav .button--link {
+  margin: 0 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

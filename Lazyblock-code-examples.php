@@ -13,9 +13,10 @@
         <?php foreach( $attributes['portfolio-gallery'] as $key => $inner ): ?>
             <div class="portfolio_gallery__item" data-slide="<?php echo $key; ?>">
                 <div class="portfolio_gallery__description">
-                    <h3><?php echo $inner['p_titel']; ?></h3>
+                    <h3 class="title title--underline"><?php echo $inner['p_titel']; ?></h3>
                     <p><?php echo $inner['p_text']; ?></p>
-                    <a href="<?php echo $inner['p_link']; ?>">
+                    <a class="button button--outline"
+                       href="<?php echo $inner['p_link']; ?>">
                         Bekijk projecten
                     </a>
                 </div>

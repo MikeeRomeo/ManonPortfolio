@@ -1,22 +1,29 @@
 (function ($) {
     jQuery(function () {
-        $(".portfolio_gallery__wrapper").find("[data-slide='" + 0 + "']").addClass("active");
+        const wrapper =  $(".portfolio_gallery__wrapper");
+        wrapper.find("[data-slide='" + 0 + "']").addClass("active");
+        $(".portfolio_gallery__nav").find("[data-id='" + 0 + "']").addClass("active");
+        setSliderHeight(0);
 
         $(".portfolio-gallery-button").on("click", function () {
             const id = $(this).data("id");
 
             $(".portfolio-gallery-button").removeClass("active");
             $(this).addClass("active");
-
-            console.log($(this).data("id"));
-            // console.log($("portfolio_gallery__wrapper").find("[data-slide='" + id + "']"));
             $(".portfolio_gallery__item").removeClass("active");
-            $(".portfolio_gallery__wrapper").find("[data-slide='" + id + "']").addClass("active");
-            //
-            // $(".portfolio_gallery__item").hide('fast');
-            // $(".portfolio_gallery__wrapper").find("[data-slide='" + id + "']").fadeIn('fast');
-
+            wrapper.find("[data-slide='" + id + "']").addClass("active");
         });
+
+        function setSliderHeight(id){
+            if($(window).width() <= 991){
+             wrapper.height(calcHeight(id));
+            }
+        }
+
+        function calcHeight(id){
+            return wrapper.find("[data-slide='" + id + "']").find(".portfolio_gallery__description").height() +
+                   wrapper.find("[data-slide='" + id + "']").find(".portfolio_gallery__image").height() + 30;
+        }
 
     })
 })(jQuery);
