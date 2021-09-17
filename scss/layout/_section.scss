@@ -1,0 +1,28 @@
+.section--fullwidth{
+  background-color: white;
+  padding: 120px 0;
+
+  @include respond-above(lg){
+    width: calc(100vw - 9px);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+
+  .section__centered-content{
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    color: $gray;
+
+    h2{
+      margin-top: 0;
+      font-size: 20px;
+      padding-bottom: 2px;
+      border-bottom: 2px solid $gold;
+      display: inline-block;
+    }
+  }
+}

@@ -12,11 +12,13 @@
             $(this).addClass("active");
             $(".portfolio_gallery__item").removeClass("active");
             wrapper.find("[data-slide='" + id + "']").addClass("active");
+            setSliderHeight(id);
         });
 
         function setSliderHeight(id){
             if($(window).width() <= 991){
-             wrapper.height(calcHeight(id));
+                wrapper.height(calcHeight(id));
+                console.log( wrapper.height())
             }
         }
 

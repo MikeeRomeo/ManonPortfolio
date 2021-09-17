@@ -39,3 +39,11 @@
         <?php endforeach; ?>
     </div>
 </div>
+
+<section class="section--fullwidth">
+    <div class="container">
+        <div class="section__centered-content">
+            <?php echo $attributes['fullwidth-content-wrapper']; ?>
+        </div>
+    </div>
+</section>
