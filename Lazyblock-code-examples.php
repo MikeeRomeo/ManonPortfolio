@@ -37,6 +37,16 @@
                     id="<?php echo $inner['p_button']; ?>">
                 <?php echo $inner['p_titel']; ?></button>
         <?php endforeach; ?>
+        <div class="portfolio_gallery__mobile-nav">
+            <button class="portfolio_gallery__slide-button button-prev" name="prev">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/arrow.png"
+                     alt="Volgende Portfolio item knop">
+            </button>
+            <button class="portfolio_gallery__slide-button button-next" name="next">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/arrow.png"
+                     alt="Vorige Portfolio item knop">
+            </button>
+        </div>
     </div>
 </div>
 
