@@ -90,7 +90,7 @@
     @include respond-above(xl) {
       height: 80vh;
       width: calc(80% + ((100vw - 1690px)/2));
-      margin-right: calc(0px - ((100vw - 1690px)/2) - 16px);
+      margin-right: calc(0px - ((100vw - 1690px)/2) - 32px);
     }
   }
 
