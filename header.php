@@ -8,37 +8,21 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="wrapper">
-    <header id="header" role="header">
+    <header id="header" class="nav-header" role="header">
         <div class="container">
             <div class="container__row">
                 <?php include 'theme-logo.php'; ?>
-
-<!--                <nav id="menu" class="nav" role="navigation" itemscope-->
-<!--                     itemtype="https://schema.org/SiteNavigationElement">-->
-<!--                    --><?php
-//                    wp_nav_menu(array('theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">',
-//                        'link_after' => '</span>'));
-//                    ?>
-<!--                </nav>-->
-<!---->
-<!--                --><?php
-//                wp_nav_menu( array(
-//                    'theme_location' => 'socials-menu',
-//                    'container_class' => 'socials-nav nav' ) );
-//                ?>
 
                 <div class="nav--wrapper">
                     <?php include 'nav-main.php'; ?>
                 </div>
 
-                <div class="nav-mobile-button">
-                    <img class="open-icon"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/icons/menu.png"
-                         alt="Mobiele naviagtie knop">
-                    <img class="close-icon"
-                         src="<?php echo get_template_directory_uri(); ?>/assets/icons/cancel.png"
-                         alt="Mobiele naviagtie knop">
-                </div>
+                <label class="nav-mobile-button" for="mobile-nav-check">
+                    <input type="checkbox" id="mobile-nav-check"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 
             </div>
 

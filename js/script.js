@@ -5,10 +5,11 @@
         const slidesLength = $('.portfolio_gallery__item').length-1;
         let currentSlide = 0;
 
+
+        // Portfolio slider LazyBlock
         wrapper.find("[data-slide='" + 0 + "']").addClass("active");
         nav.find("[data-id='" + 0 + "']").addClass("active");
         setSliderHeight(0);
-
 
         $(".portfolio-gallery-button").on("click", function () {
             const id = $(this).data("id");
@@ -65,6 +66,13 @@
             name: "prev"
         }, nextSlide );
 
+
+        // Mobile toggle
+        $('#mobile-nav-check').on('change', function(e) {
+            $('#header').toggleClass("active"); //you can list several class names
+            console.log('toggle the fucking class');
+            // e.preventDefault();
+        });
     })
 })(jQuery);
 

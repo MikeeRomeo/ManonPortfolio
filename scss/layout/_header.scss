@@ -5,15 +5,19 @@
   padding: 10px 0 10px;
   top: 0;
   z-index: 99;
-  height: 100vh;
-
-
+  height: 70px;
+  overflow-y: hidden;
+  transition: all 0.25s ease-in-out;
 
   .logo{
     max-width: 170px;
     margin-top: 15px;
 
     img{ width: 100% }
+  }
+
+  &.active{
+    height: 100vh;
   }
 
   @include respond-above(sm) {
@@ -29,6 +33,7 @@
     .container, .container__row{
       height: 100%;
       flex-direction: column;
+      min-height:50vh;
     }
   }
 }
