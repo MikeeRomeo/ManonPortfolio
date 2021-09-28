@@ -132,6 +132,11 @@ function generic_excerpt_read_more_link($more)
     }
 }
 
+function my_excerpt_length($length){
+    return 26;
+}
+add_filter('excerpt_length', 'my_excerpt_length');
+
 add_filter('big_image_size_threshold', '__return_false');
 add_filter('intermediate_image_sizes_advanced', 'generic_image_insert_override');
 function generic_image_insert_override($sizes)

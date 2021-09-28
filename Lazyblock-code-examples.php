@@ -57,3 +57,38 @@
         </div>
     </div>
 </section>
+
+<div class="container__col-10 container__col-offset-1">
+<section class="posts__wrapper">
+    <?php
+    // Define our WP Query Parameters
+    $the_query = new WP_Query('posts_per_page='.$attributes['projects_length']); ?>
+
+    <?php
+    // Start our WP Query
+    while ($the_query->have_posts()) : $the_query->the_post();
+        // Display the Post Title with Hyperlink
+        ?>
+        <article class="post">
+            <?php if ( has_post_thumbnail() ) : ?>
+                <div class="post__thumbnail">
+                    <?php the_post_thumbnail(); ?>
+                </div>
+            <?php endif; ?>
+
+            <div class="post__content">
+                <h1 class="post__title">
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                </h1>
+                <p class="post__excerpt"><?php
+                    the_excerpt(__('(more…)')); ?></p>
+            </div>
+
+        </article>
+    <?php
+        // Repeat the process and reset once it hits the limit
+    endwhile;
+    wp_reset_postdata();
+    ?>
+</section>
+</div>
