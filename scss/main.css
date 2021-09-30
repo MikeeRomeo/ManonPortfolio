@@ -1572,11 +1572,13 @@ p b {
 .posts__wrapper {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .post {
   width: 40%;
   margin-left: auto;
+  position: relative;
 }
 .post__thumbnail {
   width: 100%;
@@ -1593,9 +1595,58 @@ p b {
   display: block;
   padding-bottom: 65%;
 }
+.post__title {
+  font-size: 24px;
+  margin: 8px 0;
+}
+.post__title a {
+  color: #707070;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+.post__title a:hover, .post__title a:active {
+  color: #E2B671;
+}
+.post__excerpt {
+  margin-top: 0;
+  font-size: 14px;
+  color: #707070;
+}
+.post:nth-child(odd) {
+  margin-top: 60px;
+}
 .post:first-child {
-  width: 65%;
+  width: 100%;
   margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+.post:first-child .post__thumbnail {
+  width: 65%;
+}
+.post:first-child .post__content {
+  right: 0;
+  width: 100%;
+  padding: 30px 20px 20px;
+  background-color: white;
+  position: relative;
+  color: #707070;
+}
+@media (min-width: 992px) {
+  .post:first-child .post__content {
+    max-width: 550px;
+    padding: 70px 100px 70px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 1640px) {
+  .post:first-child .post__content {
+    max-width: 650px;
+    padding: 70px 130px 70px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

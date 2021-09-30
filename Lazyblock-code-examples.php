@@ -80,8 +80,9 @@
                 <h1 class="post__title">
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h1>
-                <p class="post__excerpt"><?php
-                    the_excerpt(__('(more…)')); ?></p>
+                <div class="post__excerpt">
+                    <?php the_excerpt(__('(more…)')); ?>
+                </div>
             </div>
 
         </article>
