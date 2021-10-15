@@ -4,7 +4,8 @@
             <?php get_template_part('entry'); ?>
         <?php endwhile; endif; ?>
         <footer class="footer">
-            <?php get_template_part('nav', 'below-single'); ?>
+<!--            --><?php //get_template_part('nav', 'below-single'); ?>
+            Footer contents
         </footer>
     </main>
 <?php get_footer(); ?>
