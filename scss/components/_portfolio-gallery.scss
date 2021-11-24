@@ -73,7 +73,8 @@
   &__image{
     width: calc(100% + 32px);
     height: 45vh;
-    margin-left: -16px;
+    margin-left: -$side-padding;
+    margin-right: -$side-padding;
 
     img{
       object-fit: cover;
@@ -85,12 +86,15 @@
       width: 70%;
       height: 75vh;
       margin-left: auto;
-      margin-right: -16px;
+      margin-right: -$side-padding-xl;
     }
-    @include respond-above(xl) {
+
+    @include respond-above(lg) {
       height: 80vh;
-      width: calc(80% + ((100vw - 1690px)/2));
-      margin-right: calc(0px - ((100vw - 1690px)/2) - 32px);
+      //width: calc(80% + ((100vw - 1690px)/2));
+      //margin-right: calc(0px - ((100vw - 1652px)/2) - 32px);
+      width: calc(80% + ((100vw - 1260px)/2));
+      margin-right: calc(0px - ((100vw - 1212px)/2));
     }
   }
 

@@ -4,8 +4,11 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Layout
+//$max: 1640px;
 $max: 1640px;
-$side-padding:16px;
+$container: 1260px;
+$side-padding: 16px;
+$side-padding-xl: 32px;
 
 // Colors
 $background: #FFFCF7;

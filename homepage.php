@@ -6,7 +6,7 @@
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="banner banner--header" role="banner">
 
-                    <div class="container">
+                    <div class="container container__column container__column--center">
                         <div class="banner__description">
                             <?php include 'theme-logo.php'; ?>
                             <?php the_field('page_description'); ?>

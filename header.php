@@ -9,7 +9,7 @@
 <?php wp_body_open(); ?>
 <div id="wrapper">
     <header id="header" class="nav-header" role="header">
-        <div class="container">
+        <div class="container container--xl">
             <div class="container__row">
                 <?php include 'theme-logo.php'; ?>
 
