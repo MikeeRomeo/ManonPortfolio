@@ -58,7 +58,7 @@
     </div>
 </section>
 
-<div class="container__col-10 container__col-offset-1">
+<div class="container__col-md-10 container__col-md-offset-1">
 <section class="posts__wrapper">
     <?php
     // Define our WP Query Parameters
@@ -93,3 +93,26 @@
     ?>
 </section>
 </div>
+
+<section class="img-grid <?php echo $attributes['img-grid__type']; ?>">
+    <div class="img-grid__image img-grid__left <?php echo $attributes['img-grid__left-pos']; ?>">
+        <?php
+        if ( isset( $attributes['img-grid__left']['url'] ) ) {?>
+        <a href="<?php $src = wp_get_attachment_image_src($attributes['img-grid__left']['id'], 'full', false);
+                       echo esc_url($src[0]); ?>"
+           title="<?php echo wp_get_attachment_image( $attributes['img-grid__left']['alt']); ?>">
+            <?php echo wp_get_attachment_image( $attributes['img-grid__left']['id'], 'medium'); ?>
+        </a>
+        <?php } ?>
+    </div>
+    <div class="img-grid__image img-grid__right <?php echo $attributes['img-grid__right-pos']; ?>">
+        <?php
+        if ( isset( $attributes['img-grid__right']['url'] ) ) {?>
+            <a href="<?php $src = wp_get_attachment_image_src($attributes['img-grid__right']['id'], 'full', false);
+            echo esc_url($src[0]); ?>"
+               title="<?php echo wp_get_attachment_image( $attributes['img-grid__right']['alt']); ?>">
+                <?php echo wp_get_attachment_image( $attributes['img-grid__right']['id'], 'medium'); ?>
+            </a>
+        <?php } ?>
+    </div>
+</section>

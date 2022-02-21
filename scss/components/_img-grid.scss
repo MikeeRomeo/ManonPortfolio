@@ -1,0 +1,48 @@
+.img-grid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  &.right-focus{
+    flex-direction: row-reverse;
+  }
+
+  &.center-focus{
+    .img-grid__image{
+      flex: 1 1 50%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  &__image{
+    width: auto;
+    max-width: 100%;
+    //height: 500px;
+    aspect-ratio: 4 / 3;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &.top img{
+      object-position: top;
+    }
+    &.bottom img{
+      object-position: bottom;
+    }
+    &.center img{
+      object-position: center;
+    }
+  }
+
+  &__left{
+    flex: 1 1 65%;
+
+  }
+
+  &__right{
+    flex: 1 1 35%;
+  }
+}

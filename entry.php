@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="banner banner--post">
         <div class="container container__column container__column--center">
-            <div class="banner__description">
+            <div class="banner__description fade-up-text">
                 <?php if (is_singular()) {
                     echo '<h1 class="post__main-title" itemprop="headline">';
                 } else {
@@ -17,7 +17,7 @@
                 <span class="post__date"><?php echo date_i18n('j F Y', time()); ?> </span>
             </div>
             <?php if (has_post_thumbnail()) : ?>
-                <div class="banner__image banner__image--post">
+                <div class="banner__image banner__image--post fade-in-image">
                     <?php the_post_thumbnail('full', array('itemprop' => 'image')); ?>
                 </div>
             <?php endif; ?>

@@ -63,6 +63,7 @@ $map-grid-props: (
   margin: 0 auto;
   padding-left: $side-padding;
   padding-right: $side-padding;
+  position: relative;
 
   &--xl{
     max-width: $max;

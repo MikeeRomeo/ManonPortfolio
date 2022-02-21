@@ -1,14 +1,40 @@
 .section--fullwidth{
-  background-color: white;
-  padding: 120px 0;
+  padding: 40px 0;
+  width: 100%;
+  position: relative;
 
-  @include respond-above(lg){
-    width: calc(100vw - 9px);
-    position: relative;
+  @include respond-above(sm){
+    padding: 120px 0;
+  }
+
+  &:after{
+    content: '';
+    background-color: white;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
     left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+  &--sm{
+    padding: 20px 0;
+
+    @include respond-above(sm){
+      padding: 50px 0;
+    }
+  }
+
+  .section__centered-content{
+    text-align: center;
+    margin: 0 auto;
+    color: $gray;
+
+    h1, h2, h3, h4{
+      margin-top: 0;
+    }
   }
 
   .section__centered-content{
@@ -23,6 +49,16 @@
       padding-bottom: 2px;
       border-bottom: 2px solid $gold;
       display: inline-block;
+    }
+  }
+
+  .section__content{
+    @include respond-above(sm){
+      padding: 0 32px;
+    }
+
+    @include respond-above(lg){
+      padding: 0 64px;
     }
   }
 }

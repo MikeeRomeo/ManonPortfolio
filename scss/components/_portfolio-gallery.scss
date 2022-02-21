@@ -90,11 +90,14 @@
     }
 
     @include respond-above(lg) {
-      height: 80vh;
       //width: calc(80% + ((100vw - 1690px)/2));
       //margin-right: calc(0px - ((100vw - 1652px)/2) - 32px);
       width: calc(80% + ((100vw - 1260px)/2));
       margin-right: calc(0px - ((100vw - 1212px)/2));
+    }
+
+    @include respond-above(xl) {
+      height: 80vh;
     }
   }
 

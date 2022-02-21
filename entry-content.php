@@ -1,4 +1,4 @@
-<div class="entry-content container" itemprop="mainEntityOfPage">
+<div class="entry-content container fade-up-wrapper" itemprop="mainEntityOfPage">
 
     <!--    <meta itemprop="description" content="--><?php //echo get_the_excerpt(); ?><!--" />-->
     <?php the_content(); ?>

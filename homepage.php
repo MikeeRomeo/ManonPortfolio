@@ -7,7 +7,7 @@
                 <div class="banner banner--header" role="banner">
 
                     <div class="container container__column container__column--center">
-                        <div class="banner__description">
+                        <div class="banner__description fade-up-text">
                             <?php include 'theme-logo.php'; ?>
                             <?php the_field('page_description'); ?>
 
@@ -18,7 +18,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="banner__image" itemprop="image">
+                    <div class="banner__image fade-in-image" itemprop="image">
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('full', array('itemprop' => 'image'));
                         } ?>

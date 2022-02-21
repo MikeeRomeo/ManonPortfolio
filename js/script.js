@@ -3,22 +3,21 @@
         const wrapper =  $(".portfolio_gallery__wrapper");
         const nav =  $(".portfolio_gallery__nav");
         const slidesLength = $('.portfolio_gallery__item').length-1;
+        const sliderButton = $(".portfolio-gallery-button");
         let currentSlide = 0;
-
 
         // Portfolio slider LazyBlock
         wrapper.find("[data-slide='" + 0 + "']").addClass("active");
         nav.find("[data-id='" + 0 + "']").addClass("active");
         setSliderHeight(0);
 
-        $(".portfolio-gallery-button").on("click", function () {
+        sliderButton.on("click", function () {
             const id = $(this).data("id");
             setActiveSlide(id);
         });
 
-
         function setActiveSlide(id){
-            $(".portfolio-gallery-button").removeClass("active");
+            sliderButton.removeClass("active");
             $(".portfolio_gallery__item").removeClass("active");
             wrapper.find("[data-slide='" + id + "']").addClass("active");
             nav.find("[data-id='" + id + "']").addClass("active");

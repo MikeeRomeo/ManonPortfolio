@@ -10,3 +10,36 @@
 .popUp-leave-active {
   animation: popUp .3s reverse;
 }
+
+.fade-in-image {
+  opacity: 0;
+  animation: fadeIn .6s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.fade-up-wrapper {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp .8s cubic-bezier(.22,.61,.36,1) 0.4s forwards;
+}
+
+@keyframes fadeUp {
+  0% {opacity:0; transform: translateY(24px)}
+  100% {opacity:1; transform: translateY(0)}
+}
+
+
+.fade-up-text {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUpText .7s cubic-bezier(.22,.61,.36,1) 0.2s forwards;
+}
+
+@keyframes fadeUpText {
+  0% {opacity:0; transform: translateY(12px)}
+  100% {opacity:1; transform: translateY(0)}
+}
