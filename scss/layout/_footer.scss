@@ -1,3 +1,17 @@
-footer{
+footer.footer{
+  padding: 40px 0;
+  background-color: #fff;
+  margin-top: 40px;
 
+  .copyright__row{
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 12px;
+    border-top: 1px solid rgba(112, 112, 112, 0.4);
+  }
+
+  #copyright{
+    margin-left: auto;
+  }
 }
+

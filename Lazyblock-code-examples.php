@@ -116,3 +116,19 @@
         <?php } ?>
     </div>
 </section>
+
+<section class="img-with-text">
+    <div class="img-with-text__img">
+        <?php
+        if ( isset( $attributes['img-with-text--img']['url'] ) ) {?>
+            <a href="<?php $src = wp_get_attachment_image_src($attributes['img-with-text--img']['id'], 'full', false);
+            echo esc_url($src[0]); ?>"
+               title="<?php echo wp_get_attachment_image( $attributes['img-with-text--img']['alt']); ?>">
+                <?php echo wp_get_attachment_image( $attributes['img-with-text--img']['id'], 'medium'); ?>
+            </a>
+        <?php } ?>
+    </div>
+    <div class="img-with-text__text">
+        <?php echo $attributes['img-with-text--text']; ?>
+    </div>
+</section>

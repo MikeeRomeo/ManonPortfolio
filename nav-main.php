@@ -1,4 +1,4 @@
-<nav id="menu" class="nav" role="navigation" itemscope
+<nav id="menu" class="nav main-nav" role="navigation" itemscope
      itemtype="https://schema.org/SiteNavigationElement">
     <?php
     wp_nav_menu(array('theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">',
