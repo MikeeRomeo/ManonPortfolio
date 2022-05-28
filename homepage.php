@@ -1,8 +1,8 @@
 <?php /* Template Name: Home Template */ ?>
 <?php get_header(); ?>
 
-    <main id="content" role="main">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<main id="content" role="main">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <div class="banner banner--header" role="banner">
 
@@ -12,9 +12,10 @@
                             <?php the_field('page_description'); ?>
 
                             <?php
-                            wp_nav_menu( array(
+                            wp_nav_menu(array(
                                 'theme_location' => 'socials-menu',
-                                'container_class' => 'socials-nav socials-nav--gold nav' ) );
+                                'container_class' => 'socials-nav socials-nav--gold nav'
+                            ));
                             ?>
                         </div>
                     </div>
@@ -30,7 +31,8 @@
                     <div class="entry-links"><?php wp_link_pages(); ?></div>
                 </div>
             </article>
-        <?php endwhile; endif; ?>
+    <?php endwhile;
+    endif; ?>
 
-    </main>
+</main>
 <?php get_footer(); ?><?php
